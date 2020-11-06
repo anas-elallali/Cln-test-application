@@ -1,0 +1,33 @@
+{
+  "name": "Network",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "network",
+      "otherEntityRelationshipName": "network",
+      "relationshipName": "networkParent",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106163918",
+  "entityTableName": "network",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
