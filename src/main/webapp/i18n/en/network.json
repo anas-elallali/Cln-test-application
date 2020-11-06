@@ -1,0 +1,25 @@
+{
+  "clnTestApp": {
+    "network": {
+      "home": {
+        "title": "Networks",
+        "createLabel": "Create a new Network",
+        "createOrEditLabel": "Create or edit a Network",
+        "search": "Search for Network",
+        "notFound": "No Networks found"
+      },
+      "created": "A new Network is created with identifier {{ param }}",
+      "updated": "A Network is updated with identifier {{ param }}",
+      "deleted": "A Network is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Network {{ id }}?"
+      },
+      "detail": {
+        "title": "Network"
+      },
+      "name": "Name",
+      "type": "Type",
+      "networkParent": "Network Parent"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="network">
+            <h2><span jhiTranslate="clnTestApp.network.detail.title">Network</span> {{ network.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="clnTestApp.network.name">Name</span></dt>
+                <dd>
+                    <span>{{ network.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="clnTestApp.network.type">Type</span></dt>
+                <dd>
+                    <span>{{ network.type }}</span>
+                </dd>
+                <dt><span jhiTranslate="clnTestApp.network.networkParent">Network Parent</span></dt>
+                <dd>
+                    <div *ngIf="network.networkParentId">
+                        <a [routerLink]="['/network', network.networkParentId, 'view']">{{ network.networkParentId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/network', network.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
